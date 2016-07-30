@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="#ss" type="text/xml"?>
+<doc>
+<tst:test xmlns:tst="blah"/>
+<rc>
+</rc>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" id="ss">
+<whoknew xmlns="what"/>
+<xsl:template match="/">
+<htm:html xmlns:htm="http://www.w3.org/1999/xhtml">
+<htm:input type="button" value="NameSpace" onclick="javascript:alert(document.childNodes[0].children[2].nodeName)"/>
+<htm:script>
+var rc = document.childNodes[0].children[1];
+var ts = document.childNodes[0].children[0];
+var all = document.childNodes[0].children;
+var len = all.length;
+//var get = document.getElementsByTagNameNS(null,"rc")[0];
+var doc = document;
+var x = doc.nodeName;
+//var y = get.prefix;
+//var z = get.namespaceURI;
+var t = doc.nodeType;
+alert(len);
+</htm:script>
+</htm:html>
+</xsl:template>
+<xsl:template match="text()"/>
+</xsl:stylesheet>
+</doc>

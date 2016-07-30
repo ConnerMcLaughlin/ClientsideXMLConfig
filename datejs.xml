@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head/>
+<p/>
+<p/>
+<body>
+<script>
+//<![CDATA[
+var d = new Date();
+var y = d.getYear() - 100;
+var m = d.getMonth() + 1;
+var datenum = [y, m, d.getDate(), d.getHours(), d.getMinutes()];
+var i;
+for(i = 0; i < datenum.length; i++){
+datenum[i] += "";
+while(datenum[i].length < 2) datenum[i] = "0" + datenum[i];}
+var p = document.getElementsByTagName("p")
+p[0].innerHTML = datenum.join("");
+p[1].innerHTML = datenum[1].length;
+//]]>
+</script>
+</body>
+</html>

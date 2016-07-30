@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<doc>
+<htm:html xmlns:htm="http://www.w3.org/1999/xhtml">
+<htm:head/>
+<htm:body>
+<htm:p>
+<htm:a href="./textbox.htm" download="web.htm">Hello</htm:a>
+</htm:p>
+<htm:script>
+//var a = document.createElement("a");
+alert(document.createElementNS("http://www.w3.org/1999/xhtml","a").download);
+</htm:script>
+</htm:body>
+</htm:html>
+</doc>

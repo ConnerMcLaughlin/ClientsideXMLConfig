@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="Config.xsl" type="text/xsl" ?>
+<doc xmlns:svg="http://www.w3.org/2000/svg">
+<rc>
+<yum val="Hello" />
+<lame val="hi" />
+</rc>
+</doc>

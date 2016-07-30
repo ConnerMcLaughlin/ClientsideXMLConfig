@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<p id="firstpara">Hello</p>
+<a download=""/>
+<a href="test.xml">First Link</a>
+<p/>
+<script>
+//<![CDATA[
+var a = document.createElementNS("http://www.w3.org/1999/xhtml","a");
+//var att = document.createAttribute("href");
+//att.value = "test.xml";
+//a.setAttributeNode(att);
+//a.attributes.createAttribute("href").value = "test.xml";
+//a.nohref = "false";
+a.text = "Link_Here";
+a.innerHTML = "Link_Here";
+a.setAttribute('href',"test.xml");
+ a.setAttributeNode(document.createAttribute("download"));
+ a.setAttribute("download","test.xml");
+var p = document.getElementsByTagName("p");
+document.getElementsByTagName("body")[0].appendChild(a);
+var anc = document.getElementsByTagName("a");
+p[0].innerHTML = "Fancy";
+anc[1].href = "test.xml";
+anc[0].href = "test.xml";
+anc[0].innerHTML = "SaveMe";
+anc[0].download = "haas.xml";
+//anc[2].pathname = anc[0].pathname;
+//anc[2].protocol = anc[0].protocol;
+//anc[2].origin = anc[0].origin;
+//anc[2].attributes.removeNamedItem("xmlns");
+//anc[2].setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+p[1].innerHTML = document.childNodes.length;
+//document.getElementsByTagName("body")[0].childNodes[10].xmlns;
+var s = new XMLSerializer();
+var strlf = s.serializeToString(document);
+var str = strlf.replace(/\n/g,"\r\n");
+alert(str);
+anc[2].href = "data:application/octet-stream;base6," + btoa(str);
+//p[1].innerHTML = anc[2].attributes.length;
+//]]>
+</script>
+</body>
+</html>

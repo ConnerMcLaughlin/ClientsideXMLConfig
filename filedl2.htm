@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body onload="alert('hey\nthere')">
+<script>
+function f()
+{
+<!-- var s = new XMLSerializer();
+var str = s.serializeToString(document);
+<!-- document.dl.action = "data:application/octet-stream;base64," + btoa(str); -->
+document.dl.action = "test.xml"; -->
+alert("js working");
+}
+</script>
+<form name="dl" action="/">
+<button type="submit">Download!</button>
+</form>
+</body>
+</html>
